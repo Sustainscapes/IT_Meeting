@@ -1,0 +1,25 @@
+---
+title: "Goals of meeting with Thorkild Laursen and Jacob Styrup Bang"
+date: "`r Sys.Date()`"
+output: 
+  bookdown::word_document2
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Tasks
+
+We want to move more of our work to the cloud, our team had prior experience doing this within the confines of AWS, but the move to AZURE proved to be more difficult than expected, this is due to our lack of experience, and we first want to thank for all the prior support.
+
+There are three issues we want to discuss, however the first one is the one than we need to approach first, and then the later ones could be explored in subsequent meetings if deemed necessary. The three main tasks are the following and will be described in further paragraphs, we feel that we need more help in the DevOps side, hopefully
+
+## Deployment of shiny apps for Students and outreach
+
+Out team has experience in the generation of webapps using shiny in r. In order to deploy them there are 3 basic ways to do it:
+
+1. Usage of [shiny server](https://www.rstudio.com/products/shiny/shiny-server/) which we already have experience with through AWS (here is an example of a [live app](http://18.159.101.5/shiny/rstudio/sample-apps/SummaryApp/)), the main issue with this is that shiny server is single thread so it does not scale.
+2. Usage of dockerized shiny apps (hopefully with the use of a kubernetes cluster?), we are able to generate the dockerfile in order to run it
+3. Usage of Shiny proxy
+
